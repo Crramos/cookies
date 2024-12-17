@@ -1,0 +1,18 @@
+<div id="comment-section">
+  <h2>Comentarios</h2>
+  <form id="comment-form">
+    <div class="comment">
+      <img src="/images/Fotoperfilpordefecto.png" alt="Avatar" id="imagen_perfil">
+      <textarea id="comment-input" placeholder="Escribe tu comentario aquí..." required></textarea>
+      <button class="form-submit-button" id="send-message" type="submit">Enviar</button>
+    </div>
+  </form>
+  <div id="comments-container">
+    <div class="comment">
+       <ul id="messages"></ul>
+       <input type="hidden" id="pageId" value=1>
+       <input type="hidden" id="user" value=<%= user.username%>>
+    </div>
+  </div>	
+</div>
+</div>

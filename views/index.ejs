@@ -1,0 +1,26 @@
+<%- include("header", {}) %>
+<div>
+<h1>Bienvenido a <%= title %></h1>
+</div>
+<div id="cookies-banner">
+    <div class="cookies-message">
+        Usamos cookies para mejorar su experiencia. ¿Acepta su uso?
+    </div>
+    <div class="cookies-buttons">
+  <form id="accept-form" action="/accept-cookies" method="POST" style="display: none;"></form>
+        <button class="accept-btn" onclick="submitForm('accept-form')">Aceptar</button>
+        <button class="reject-btn" onclick="rejectCookies()">Rechazar</button>
+    </div>
+</div>
+
+<%- include("chat", {}) %>
+<script>
+    function submitForm(formId) {
+        document.getElementById(formId).submit();
+    }
+    function rejectCookies() {
+        alert("Has rechazado las cookies. No se guardará ninguna.");
+        document.getElementById("cookies-banner").style.display = "none";
+    }
+</script>
+<%- include("footer", {}) %>

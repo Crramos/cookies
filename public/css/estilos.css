@@ -1,0 +1,70 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+#cookies-banner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #f4f4f4;
+	padding: 15px 20px;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+.cookies-message {
+	font-size: 14px;
+}
+.cookies-buttons {
+	display: flex;
+	gap: 10px;
+}
+button {
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+.accept-btn {
+	background: #4caf50;
+	color: white;
+}
+.reject-btn {
+	background: #f44336;
+	color: white;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00cc66;
+    transform: scale(1.1);
+}
