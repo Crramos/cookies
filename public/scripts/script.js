@@ -15,26 +15,26 @@ socket.on('chat', (msg) => {
 });
 
 function createMessageElement(msg) {    
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('comment-content');
+    const messageclasi = document.createElement('li');
+    messageclasi.classList.add('comment-content');
     
     // Imagen de perfil por defecto
     const img = document.createElement('img');
     const image = msg.imagen_perfil;
     img.src = image;
     img.classList.add('avatar');
-    messageElement.appendChild(img);
+    messageclasi.appendChild(img);
     
     // Nombre del usuario y el mensaje
     const userText = document.createElement('strong');
     userText.textContent = `${msg.username}:`;
-    messageElement.appendChild(userText);
+    messageclasi.appendChild(userText);
     
     const messageText = document.createElement('span');
     messageText.textContent = msg.message;
-    messageElement.appendChild(messageText);
+    messageclasi.appendChild(messageText);
     
-    return messageElement;
+    return messageclasi;
 
 }
 

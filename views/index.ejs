@@ -2,18 +2,19 @@
 <div>
 <h1>Bienvenido a <%= title %></h1>
 </div>
+<% if(!cookies){ %>
 <div id="cookies-banner">
     <div class="cookies-message">
         Usamos cookies para mejorar su experiencia. ¿Acepta su uso?
     </div>
     <div class="cookies-buttons">
   <form id="accept-form" action="/accept-cookies" method="POST" style="display: none;"></form>
+  <form id="reject-form" action="/reject-cookies" method="POST" style="display: none;"></form>
         <button class="accept-btn" onclick="submitForm('accept-form')">Aceptar</button>
-        <button class="reject-btn" onclick="rejectCookies()">Rechazar</button>
+        <button class="reject-btn" onclick="submitForm('reject-form')">Rechazar</button>
     </div>
 </div>
-
-<%- include("chat", {}) %>
+<% } %>
 <script>
     function submitForm(formId) {
         document.getElementById(formId).submit();

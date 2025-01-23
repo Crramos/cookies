@@ -55,7 +55,7 @@ app.use('/logout', (req,res) =>{
 });
 
 function restricted(req, res, next){
-  if(req.session.user){
+  if(req.session.user || req.cookies.username){
     next();
   } else {
     res.redirect("login");

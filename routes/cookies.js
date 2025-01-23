@@ -7,4 +7,9 @@ router.post('/accept-cookies', (req, res) => {
 	res.redirect('/');
 });
 
+router.post('/reject-cookies', (req, res) => {
+    res.cookie('cookiesConsent', 'reject', { maxAge: 900000, httpOnly: true });
+	res.redirect('/');
+});
+
 module.exports = router;
