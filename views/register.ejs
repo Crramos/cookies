@@ -1,8 +1,40 @@
 <%- include("header", {}) %>
-<h1>Register</h1>
-<form method="post" action="/register">
-  <label>Username: </label> <input type="text" name="user"><br>
-  <label>Password: </label> <input type="password" name="pass"><br>
-  <button type="submit">Submit</button>
-</form>
+<div class="centrar">
+<div class="register-container">
+    <h1>Registro</h1>
+    <form action="/register" method="post">
+      <div class="form-group">
+        <label for="user">Nombre de usuario:</label>
+        <input 
+          type="text" 
+          id="user" 
+          name="user" 
+          required 
+          minlength="3" 
+          maxlength="20" 
+          pattern="^[a-zA-Z0-9_]+$" 
+          title="Solo letras, números y guiones bajos. Mínimo 3 caracteres, máximo 20."
+        >
+        <span class="error-message">Usuario inválido. Usa letras, números y guiones bajos.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="pass">Contraseña:</label>
+        <input 
+          type="password" 
+          id="pass" 
+          name="pass" 
+          required 
+          minlength="8" 
+          pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$" 
+          title="Debe tener al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial."
+        >
+        <span class="error-message">La contraseña no cumple con los requisitos.</span>
+      </div>
+
+      <button type="submit" class="submit-btn">Registrar</button>
+    </form>
+  </div>
+</div> 
+
 <%- include("footer", {}) %>

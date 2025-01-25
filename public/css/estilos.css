@@ -317,4 +317,87 @@ nav ul li a:hover {
 	  max-width: 100%;
 	}
   }
+  .centrar{
+	height: 60vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-container {
+	background: #fff;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	max-width: 400px;
+	width: 100%;
+	text-align: center;
+  }
+
+  .register-container h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #333;
+  }
+
+  .form-group {
+	margin-bottom: 15px;
+  }
+
+  .form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #555;
+  }
+
+  .form-group input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: border-color 0.3s;
+  }
+
+  .form-group input:focus {
+	border-color: #007bff;
+	outline: none;
+  }
+
+  .form-group input:invalid {
+	border-color: red;
+  }
+
+  .form-group input:valid {
+	border-color: green;
+  }
+
+  .form-group .error-message {
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
+	display: none;
+  }
+
+  .form-group input:invalid + .error-message {
+	display: block;
+  }
+
+  .submit-btn {
+	width: 100%;
+	padding: 10px;
+	background: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: background 0.3s ease;
+  }
+
+  .submit-btn:hover {
+	background: #0056b3;
+  }
+
   

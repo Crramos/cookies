@@ -29,7 +29,7 @@ router.get('/', async function(req, res, next) {
         
       });
       console.log(articulosProcesados)
-      res.render('lista', { title: 'Juegos',
+      res.render('lista', { tittle: 'Juegos',
                                 user:usuario ? usuario : false, 
                                 numero_carrusel:0,
                                 total_items: total_items,

@@ -1,9 +1,13 @@
 <%- include("header", {}) %>
 <h1><%= title %></h1>
-<p>Welcome to Login</p>
-<form action="/login" method="post">
-  <label for="user">Username: </label><input type="text" name="user" id="user">
-  <label for="pass">Password: </label><input type="password" name="pass" id="pass">
-  <button type="submit">Submit</button>
-</form>
+<div class="centrar">
+  <div class="register-container">
+    <h1>Login</h1>
+    <form action="/login" method="post">
+      <label class="form-group" for="user">Username: </label><input type="text" name="user" id="user">
+      <label class="form-group" for="pass">Password: </label><input type="password" name="pass" id="pass">
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
 <%- include("footer", {}) %>
