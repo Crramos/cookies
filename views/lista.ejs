@@ -1,0 +1,67 @@
+<%- include("header", {}) %>
+<h1><%= title %></h1>
+<div class="container-carousel"> 
+    <% if(user) { %>
+    <input type="hidden" id="userId" value="<%= user.username %>">
+    <% } %>
+    <% for (let i = numero_carrusel ; i < articulos.length; i++) { %>
+    <div class="columna"> 
+        <div class="row">
+            <div class="recomendacion">
+                <div class="imagen-comunidad">
+                        <img src="<%= articulos[i].imagen_articulo %>" alt="Imagen de ejercicio">
+                        <% if(user) { %>
+                       <!--- <i class="star-icon <%=  usuarioFavoritos.includes(articulos[i].id) ? 'active' : '' %>" data-id="<%= articulos[i].id %>">★</i> --->
+                        <% } %>
+                    <p class="author-name"><%= articulos[i].usuario_escritor %></p>
+                </div> 
+                <div class="titulo-ejercicio">
+                    <div class="sombreado">
+                      <!---  <a href= "<%= articulos[i].pagina_enlaces %>"> --->
+                            <p class="titulo-ejercicio"><%= articulos[i].titulo_articulo %></p>
+                            <div>
+                                <p class= "descripcion"> <%= articulos[i].descripcion %></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="reaction-buttons carousel-item">
+                     <!---   <button class="likeButton reaction-btn">👍 <span class="likeCount"><%= articulos[i].numero_likes %></span></button>
+                        <button class="dislikeButton reaction-btn">👎 <span class="dislikeCount"><%= articulos[i].numero_dislikes %></span></button> --->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% i++; if(i == articulos.length) { %>
+        </div>	
+        <%break;} %>
+        <div class="row">
+            <div class="recomendacion">
+                <div class="imagen-comunidad">
+                    <img src="<%= articulos[i].imagen_articulo %>" alt="Imagen de ejercicio">
+                    <% if(user) { %>
+                 <!-----   <i class="star-icon <%=  usuarioFavoritos.includes(articulos[i].id) ? 'active' : '' %>" data-id="<%= articulos[i].id %>">★</i> --->
+                    <% } %>
+                    <p class="author-name"><%= articulos[i].usuario_escritor %></p>
+                </div>
+                <div class="titulo-ejercicio">
+                    <div class="sombreado">
+                    <!-----    <a href= "<%= articulos[i].pagina_enlaces %>"> ---->
+                            <p class="titulo-ejercicio"><%= articulos[i].titulo_articulo %></p>
+                            <div>
+                                <p class="descripcion"><%= articulos[i].descripcion %></p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="reaction-buttons carousel-item">
+                 <!----      <button class="likeButton reaction-btn">👍 <span class="likeCount"><%= articulos[i].numero_likes %></span></button>
+                        <button class="dislikeButton reaction-btn">👎 <span class="dislikeCount"><%= articulos[i].numero_dislikes %></span></button> --->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+</div>
+<div class="pagination-buttons">
+</div>
+<%- include("footer", {}) %>

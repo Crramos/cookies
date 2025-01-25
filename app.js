@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const indexRouter = require('./routes/index');
 const loginRouter = require('./routes/login');
+const listaRouter = require('./routes/lista');
 const restrictedRouter = require('./routes/restricted');
 const registerRouter = require('./routes/register');
 const cookiesRouter = require('./routes/cookies');
@@ -45,6 +46,7 @@ app.use((req,res,next) => {
 
 app.use('/', indexRouter, cookiesRouter);
 app.use('/login', loginRouter);
+app.use('/lista', listaRouter);
 app.use('/register', registerRouter);
 app.use('/restricted', restricted, restrictedRouter);
 app.use('/logout', (req,res) =>{

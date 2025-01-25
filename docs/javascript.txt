@@ -1,0 +1,33 @@
+Para pedir al usuario que escriba algo (intrusivo)
+//prompt(title, [default]);
+let result = prompt("¿Cuantos años tienes?","");
+console.log(result);
+console.log(typeof(result)); //string
+------------------------------------------------------------
+Para pedir al usuario que confirme (intrusivo)
+//result = confirm(question);
+let str = confirm("¿Estás de acuerdo?");
+console.log(str) //true o false
+------------------------------------------------------------
+Imprimir mensajes en consola de navegador 
+//console.log(mensaje);
+console.log("Esto se imprime en la consola");
+------------------------------------------------------------
+Separar cadenas
+"string".split(pattern)
+const result = "Texto de prueba".split(" ")
+console.log(result) // ['Texto', 'de', 'prueba']
+const [p1, p2, p3] = "Texto de prueba".split(" ")
+------------------------------------------------------------
+Sacar a partir de 
+"string".slice(start, [end])
+console.log("Texto de prueba".slice(6)) // de prueba
+console.log("Texto de prueba".slice(6,8)) // de
+------------------------------------------------------------
+Sacar un caracter de una cadena
+"string".charAt(index)
+console.log("Texto de prueba".charAt(2)) // x
+------------------------------------------------------------
+Conversión a String, Number, boolean
+console.log(String("23")); //'23'  console.log(Number("23") + 1); //24    console.log(Boolean(0)); //false
+------------------------------------------------------------
